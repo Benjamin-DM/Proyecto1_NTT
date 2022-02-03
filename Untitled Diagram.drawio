@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-03T20:01:44.309Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="gkOUu1VmVmmyAui7sw1Y" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-03T20:13:45.826Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="qdbEe05nHgvP-J3RNUpN" version="16.5.3" type="github">
   <diagram id="lopL0MONfdwnP9RmBGuu" name="Page-1">
     <mxGraphModel dx="868" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -15,6 +15,12 @@
         </mxCell>
         <mxCell id="0uReqqwGwvWxbqI3LPFT-4" value="ID&lt;br&gt;Name&lt;br&gt;Type" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="0uReqqwGwvWxbqI3LPFT-2">
           <mxGeometry x="55" y="55" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0uReqqwGwvWxbqI3LPFT-6" value="Service Consume" style="swimlane;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0uReqqwGwvWxbqI3LPFT-7" value="ID clients&amp;nbsp;&lt;br&gt;ID products&lt;br&gt;ID servicecons&lt;br&gt;Headlines&lt;br&gt;Signatories&lt;br&gt;quantities&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="0uReqqwGwvWxbqI3LPFT-6">
+          <mxGeometry x="65" y="55" width="90" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
