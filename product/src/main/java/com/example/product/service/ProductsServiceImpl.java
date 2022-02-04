@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
 @Service
-public class ProductsServiceImpl implements ProductsService{
+public class ProductsServiceImpl implements IProductsService{
 
     @Autowired
     private ProductsDao productDao;
