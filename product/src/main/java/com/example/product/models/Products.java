@@ -13,16 +13,13 @@ public class Products {
 
     @Id
     private String id;
+    private String nameProduct;
+    private String numberCard;
     private String typeProduct;
-    private Integer accountNumber;
-    private Double amount;
+    private String accountNumber;
     @DateTimeFormat(pattern = "yyyy-mm-dd")
     private Date createDate;
-    @DateTimeFormat(pattern = "yyyy-mm-dd")
-    private Date updateDate;
-    private Double creditLimit;
 
-    //Mapear el service Client
-    private Client client;
+
 
 }

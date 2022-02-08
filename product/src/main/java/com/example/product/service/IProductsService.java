@@ -10,11 +10,11 @@ public interface IProductsService {
 
         public Mono<Products> save(Products products);
 
-        public Mono<Products> update(Products products);
+        public Mono<Void> delete(Products products);
 
-        public Mono<Void> delete(String id);
+        public Mono<Products> findByNameProduct(String nameProduct);
 
-
+        public Mono<Products> findById(String id);
 
 
 }

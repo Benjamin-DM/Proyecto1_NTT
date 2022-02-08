@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Date;
+
 @Service
 public class ProductsServiceImpl implements IProductsService{
 
@@ -24,12 +26,17 @@ public class ProductsServiceImpl implements IProductsService{
     }
 
     @Override
-    public Mono<Products> update(Products products) {
-        return productDao.save(products);
+    public Mono<Void> delete(Products products) {
+        return productDao.delete(products);
     }
 
     @Override
-    public Mono<Void> delete(String id) {
-        return productDao.deleteById(id);
+    public Mono<Products> findByNameProduct(String nameProduct) {
+        return productDao.findByNameProduct(nameProduct);
+    }
+
+    @Override
+    public Mono<Products> findById(String id) {
+        return productDao.findById(id);
     }
 }
