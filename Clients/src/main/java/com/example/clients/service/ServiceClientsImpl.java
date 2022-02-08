@@ -19,7 +19,31 @@ public class ServiceClientsImpl implements ServiceClients{
     }
 
     @Override
+    public Flux<ClientsEntity> findClientsByName(String name) {
+        return repository.findByName(name);
+    }
+
+    @Override
+    public Flux<ClientsEntity> findClientsByType(String type) {
+        return repository.findByType(type);
+    }
+
+    @Override
     public Mono<ClientsEntity> save(ClientsEntity clients) {
         return repository.save(clients);
     }
+
+    @Override
+    public Mono<ClientsEntity> update(ClientsEntity clients) {
+        return repository.save(clients);
+    }
+
+    @Override
+    public void delete(String Id) {
+
+        repository.deleteById(Id).subscribe();
+
+    }
+
+
 }

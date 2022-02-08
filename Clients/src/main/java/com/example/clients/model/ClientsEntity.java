@@ -13,8 +13,9 @@ public class ClientsEntity {
     @Id
     private String Id;
     private String Name;
-    private String LastName;
     private String Type;
-
+    private String Categories;
+    private String DNI;
+    private String Phone;
 
 }
