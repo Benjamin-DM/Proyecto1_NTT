@@ -16,6 +16,8 @@ public interface IProductsService {
 
         public Mono<Products> findById(String id);
 
+        public Flux<Products> findByTypeProduct(String typeProduct);
+
 
 }
 

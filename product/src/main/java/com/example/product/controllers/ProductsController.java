@@ -23,7 +23,6 @@ public class ProductsController {
 
     private final IProductsService productService;
 
-
     //Metodo listar, usando response entity para manejar la respuesta del status y la respuesta del body
     @GetMapping
     public Mono<ResponseEntity<Flux<Products>>>  getProduct(){
@@ -102,6 +101,12 @@ public class ProductsController {
                         //devolvemos el objeto obtenido
                         .body(p))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
+
+    //metodo buscar por typeProduct
+    @GetMapping("/search/{typeProduct}")
+    public Flux<Products> searchType(@PathVariable String typeProduct){
+        return productService.findByTypeProduct(typeProduct);
     }
 
 

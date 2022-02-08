@@ -39,4 +39,9 @@ public class ProductsServiceImpl implements IProductsService{
     public Mono<Products> findById(String id) {
         return productDao.findById(id);
     }
+
+    @Override
+    public Flux<Products> findByTypeProduct(String typeProduct) {
+        return productDao.findByTypeProduct(typeProduct);
+    }
 }
