@@ -30,20 +30,21 @@ public class ServiceClientsImpl implements ServiceClients{
 
     @Override
     public Mono<ClientsEntity> save(ClientsEntity clients) {
+
         return repository.save(clients);
     }
 
     @Override
     public Mono<ClientsEntity> update(ClientsEntity clients) {
+
         return repository.save(clients);
     }
 
     @Override
-    public void delete(String Id) {
-
-        repository.deleteById(Id).subscribe();
-
+    public void delete(String id) {
+        repository.deleteById(id).subscribe();
     }
+
 
 
 }

@@ -1,21 +1,18 @@
 package com.example.clients.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Getter
-@Setter
+@Data
 @Document("Clients")
 public class ClientsEntity {
 
     @Id
-    private String Id;
-    private String Name;
-    private String Type;
-    private String Categories;
-    private String DNI;
-    private String Phone;
+    private String id;
+    private String name;
+    private String type;
+    private String dni;
+    private String phone;
 
 }
