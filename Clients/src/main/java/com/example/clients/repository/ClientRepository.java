@@ -11,4 +11,6 @@ public interface ClientRepository extends ReactiveMongoRepository<ClientsEntity,
     Flux<ClientsEntity> findByName(String name);
     Flux<ClientsEntity> findByType(String type);
 
+    Flux<ClientsEntity> findByAssignmentId(String assignmentId);
+
 }

@@ -14,5 +14,6 @@ public class ClientsEntity {
     private String type;
     private String dni;
     private String phone;
+    private String assignmentId;
 
 }

@@ -45,6 +45,10 @@ public class ServiceClientsImpl implements ServiceClients{
         repository.deleteById(id).subscribe();
     }
 
+    @Override
+    public Flux<ClientsEntity> getByAssignmentId(String assignmentId) {
+        return repository.findByAssignmentId(assignmentId);
+    }
 
 
 }

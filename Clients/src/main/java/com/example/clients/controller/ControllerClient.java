@@ -25,6 +25,13 @@ public class ControllerClient {
         return service.findAll();
     }
 
+
+    @GetMapping("/byAssignment/{assignmentId}")
+    public Flux<ClientsEntity> getByAssignmentId(@PathVariable("assignmentId") String assignmentId){
+        return service.getByAssignmentId(assignmentId);
+    }
+
+
     @GetMapping("/getName/{name}")
     public Flux<ClientsEntity> getClientByName(@PathVariable("name") String name){
         return service.findClientsByName(name);

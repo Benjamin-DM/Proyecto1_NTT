@@ -18,4 +18,6 @@ public interface ServiceClients {
 
     void delete(String id);
 
+    Flux<ClientsEntity> getByAssignmentId(String assignmentId);
+
 }
