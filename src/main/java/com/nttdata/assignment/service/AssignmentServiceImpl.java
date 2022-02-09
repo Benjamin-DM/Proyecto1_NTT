@@ -16,7 +16,7 @@ public class AssignmentServiceImpl implements IAssignmentService {
     @Autowired
     IAssignmentRepository repository;
 
-    WebClient webClientClient = WebClient.builder().baseUrl("http://localhost:8080").build();
+    WebClient webClientClient = WebClient.builder().baseUrl("http://localhost:8090").build();
 
     WebClient webClientProduct = WebClient.builder().baseUrl("http://localhost:8080").build();
 
@@ -50,7 +50,7 @@ public class AssignmentServiceImpl implements IAssignmentService {
     public Flux<Client> getByClients(String assignmentId) {
         Flux<Client> clientFlux = webClientClient
                 .get()
-                .uri("/client/byAssignment/{assignmentId}", assignmentId)
+                .uri("/clients/byAssignment/{assignmentId}", assignmentId)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux(Client.class);
