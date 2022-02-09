@@ -45,7 +45,7 @@ public class ControllerPersonas {
     }
 
     @GetMapping("/clients/{assignmentId}")
-    public Flux<Client> getByClients(@PathVariable("assignmentId") String assignmentId){
-        return service.getByClients(assignmentId);
+    public Flux<Client> getClients(@PathVariable("assignmentId") String assignmentId){
+        return service.getClients(assignmentId);
     }
 }

@@ -16,6 +16,6 @@ public interface IAssignmentService {
 
     void delete(String id);
 
-    Flux<Client> getByClients(String assignmentId);
+    Flux<Client> getClients(String assignmentId);
 
 }

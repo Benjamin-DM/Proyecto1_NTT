@@ -47,7 +47,7 @@ public class AssignmentServiceImpl implements IAssignmentService {
     }
 
     @Override
-    public Flux<Client> getByClients(String assignmentId) {
+    public Flux<Client> getClients(String assignmentId) {
         Flux<Client> clientFlux = webClientClient
                 .get()
                 .uri("/clients/byAssignment/{assignmentId}", assignmentId)
