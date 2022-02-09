@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "3c4bf448-8e96-44f2-bb42-c975f3a9450b",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get Assignments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Assignment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorization\": \"yes\",\r\n    \"maintenanceFee\": 10.5,\r\n    \"movementLimit\": 10,\r\n    \"creditsAllowed\": 10,\r\n    \"idProduct\": \"1\",\r\n    \"idClient\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/assignment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Assignment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62041d6ac9dc0406f81645ae\",\r\n    \"authorization\": \"yes\",\r\n    \"maintenanceFee\": 20.5,\r\n    \"movementLimit\": 20,\r\n    \"creditsAllowed\": 20,\r\n    \"idProduct\": \"4\",\r\n    \"idClient\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/assignment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Assignment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment/62041e2e7e3a9e11f05f70cb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"62041e2e7e3a9e11f05f70cb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
