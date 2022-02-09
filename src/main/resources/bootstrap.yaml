@@ -1,1 +1,10 @@
-
+spring:
+  application:
+    name: assignment-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+  data:
+    mongodb:
+      uri: mongodb+srv://edwar123:edwar123@cluster0.naakg.mongodb.net/nttdata-assignment?retryWrites=true&w=majority
