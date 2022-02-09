@@ -8,9 +8,9 @@ public interface ServiceMovements {
 
     Flux<MovementsEntity> findAll();
 
-    Flux<MovementsEntity> findClientsByName(String name);
+    Flux<MovementsEntity> findMovementsByName(String name);
 
-    Flux<MovementsEntity> findClientsByAmount(String type);
+    Flux<MovementsEntity> findMovementsByAmount(String type);
 
     Mono<MovementsEntity> save(MovementsEntity movements);
 

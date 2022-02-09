@@ -15,31 +15,32 @@ public class SeviceMovementImpl implements ServiceMovements {
 
     @Override
     public Flux<MovementsEntity> findAll() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
-    public Flux<MovementsEntity> findClientsByName(String name) {
-        return null;
+    public Flux<MovementsEntity> findMovementsByName(String name) {
+        return repository.findByName(name);
     }
 
     @Override
-    public Flux<MovementsEntity> findClientsByAmount(String type) {
-        return null;
+    public Flux<MovementsEntity> findMovementsByAmount(String type) {
+        return repository.findByAmount(type);
     }
 
     @Override
     public Mono<MovementsEntity> save(MovementsEntity movements) {
-        return null;
+        return repository.save(movements);
     }
 
     @Override
     public Mono<MovementsEntity> update(MovementsEntity movements) {
-        return null;
+        return repository.save(movements);
     }
 
     @Override
     public void delete(String id) {
+        repository.deleteById(id).subscribe();
 
     }
 }
