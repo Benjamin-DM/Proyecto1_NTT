@@ -46,15 +46,4 @@ public class ControllerMovements {
 
         return service.save(movements);
     }
-
-    @PutMapping("/update")
-    Mono<MovementsEntity> update (@RequestBody MovementsEntity movements ){
-        return service.update(movements);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity delete (@PathVariable("id") String id){
-        service.delete(id);
-        return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
-    }
 }

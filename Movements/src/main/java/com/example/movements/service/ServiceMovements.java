@@ -16,7 +16,4 @@ public interface ServiceMovements {
 
     Mono<MovementsEntity> save(MovementsEntity movements);
 
-    Mono<MovementsEntity> update(MovementsEntity movements);
-
-    void delete(String id);
 }

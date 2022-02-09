@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "de8cd05c-2a1a-46b1-a98e-647a170145cb",
+		"name": "Movements",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agregar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Deposito\",\r\n    \"type\": \"Cuenta Bancaria\",\r\n    \"category\": \"cuentas\",\r\n    \"client\": \"Miguel\",\r\n    \"amount\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/movements/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"movements",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/movements/get",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"movements",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/movements/getName/Deposito",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"movements",
+						"getName",
+						"Deposito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por Monto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/movements/getAmount/500",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"movements",
+						"getAmount",
+						"500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar monto por transaccion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/movements/getAmountName/Pago/500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"movements",
+						"getAmountName",
+						"Pago",
+						"500"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

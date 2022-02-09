@@ -38,14 +38,4 @@ public class SeviceMovementImpl implements ServiceMovements {
         return repository.save(movements);
     }
 
-    @Override
-    public Mono<MovementsEntity> update(MovementsEntity movements) {
-        return repository.save(movements);
-    }
-
-    @Override
-    public void delete(String id) {
-        repository.deleteById(id).subscribe();
-
-    }
 }
