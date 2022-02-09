@@ -1,9 +1,12 @@
 package com.nttdata.assignment.service;
 
 import com.nttdata.assignment.entity.Assignment;
+import com.nttdata.assignment.model.Client;
 import com.nttdata.assignment.repository.IAssignmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -12,6 +15,10 @@ public class AssignmentServiceImpl implements IAssignmentService {
 
     @Autowired
     IAssignmentRepository repository;
+
+    WebClient webClientClient = WebClient.builder().baseUrl("http://localhost:8080").build();
+
+    WebClient webClientProduct = WebClient.builder().baseUrl("http://localhost:8080").build();
 
     @Override
     public Flux<Assignment> findAll() {
@@ -38,4 +45,16 @@ public class AssignmentServiceImpl implements IAssignmentService {
     public void delete(String id) {
         repository.deleteById(id).subscribe();
     }
+
+    @Override
+    public Flux<Client> getByClients(String assignmentId) {
+        Flux<Client> clientFlux = webClientClient
+                .get()
+                .uri("/client/byAssignment/{assignmentId}", assignmentId)
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(Client.class);
+        return clientFlux;
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.nttdata.assignment.controller;
 
 import com.nttdata.assignment.entity.Assignment;
+import com.nttdata.assignment.model.Client;
 import com.nttdata.assignment.service.IAssignmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -41,5 +42,10 @@ public class ControllerPersonas {
     @DeleteMapping ("/{id}")
     void dltPersonas(@PathVariable("id") String id){
         service.delete(id);
+    }
+
+    @GetMapping("/clients/{assignmentId}")
+    public Flux<Client> getByClients(@PathVariable("assignmentId") String assignmentId){
+        return service.getByClients(assignmentId);
     }
 }

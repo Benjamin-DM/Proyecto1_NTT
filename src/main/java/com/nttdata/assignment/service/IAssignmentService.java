@@ -1,6 +1,7 @@
 package com.nttdata.assignment.service;
 
 import com.nttdata.assignment.entity.Assignment;
+import com.nttdata.assignment.model.Client;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -14,4 +15,7 @@ public interface IAssignmentService {
     Mono<Assignment> update(Assignment assignment);
 
     void delete(String id);
+
+    Flux<Client> getByClients(String assignmentId);
+
 }
