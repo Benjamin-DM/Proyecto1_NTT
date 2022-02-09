@@ -9,6 +9,8 @@ import reactor.core.publisher.Flux;
 public interface MovementsRepository extends ReactiveMongoRepository<MovementsEntity, String> {
 
     Flux<MovementsEntity> findByName(String name);
-    Flux<MovementsEntity> findByAmount(String amount);
+    Flux<MovementsEntity> findByAmount(Double amount);
+
+    Flux<MovementsEntity> findByNameAndAmount(String name, Double amount);
 
 }

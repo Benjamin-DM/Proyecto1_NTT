@@ -10,7 +10,9 @@ public interface ServiceMovements {
 
     Flux<MovementsEntity> findMovementsByName(String name);
 
-    Flux<MovementsEntity> findMovementsByAmount(String type);
+    Flux<MovementsEntity> findMovementsByAmount(Double amount);
+
+    Flux<MovementsEntity> findByNameAndAmount(String name, Double amount);
 
     Mono<MovementsEntity> save(MovementsEntity movements);
 

@@ -32,8 +32,13 @@ public class ControllerMovements {
     }
 
     @GetMapping("/getAmount/{amount}")
-    public Flux<MovementsEntity> getMovementsByAmount(@PathVariable("amount")String amount) {
+    public Flux<MovementsEntity> getMovementsByAmount(@PathVariable("amount") Double amount) {
         return service.findMovementsByAmount(amount);
+    }
+
+    @GetMapping("/getAmountName/{name}/{amount}")
+    public Flux<MovementsEntity> findByNameAndAmount(@PathVariable("name")String name, @PathVariable("amount") Double amount) {
+        return service.findByNameAndAmount(name, amount);
     }
 
     @PostMapping("/post")

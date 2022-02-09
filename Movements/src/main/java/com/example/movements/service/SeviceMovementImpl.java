@@ -24,8 +24,13 @@ public class SeviceMovementImpl implements ServiceMovements {
     }
 
     @Override
-    public Flux<MovementsEntity> findMovementsByAmount(String type) {
-        return repository.findByAmount(type);
+    public Flux<MovementsEntity> findMovementsByAmount(Double amount) {
+        return repository.findByAmount(amount);
+    }
+
+    @Override
+    public Flux<MovementsEntity> findByNameAndAmount(String name, Double amount){
+        return repository.findByNameAndAmount(name, amount);
     }
 
     @Override
