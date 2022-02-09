@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "b1f63d0f-b9fa-4b3a-b08b-dd43443b8db2",
+		"name": "Proyect1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/clients/get",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/clients/getType/Personal",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						"getType",
+						"Personal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"type\": \"Personal\",\r\n        \"dni\": \"78123456\",\r\n        \"phone\": \"986987987\",\r\n        \"name\": \"Alonso\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/clients/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"620300d9e151905714a31282\",\r\n        \"name\": \"Martin\",\r\n        \"type\": \"Personal\",\r\n        \"dni\": \"78123456\",\r\n        \"phone\": \"986987987\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/clients/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/clients/delete/620300d9e151905714a31282",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clients",
+						"delete",
+						"620300d9e151905714a31282"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
